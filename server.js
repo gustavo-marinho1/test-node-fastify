@@ -2,8 +2,8 @@ import { fastify } from "fastify";
 import { DatabasePostgres } from "./database-postgres.js";
 
 const server = fastify();
-
 const database = new DatabasePostgres();
+
 
 server.get("/videos", async (req, res) => {
   const search = req.query.search;
